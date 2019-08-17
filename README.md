@@ -56,6 +56,9 @@ MAJOR UPDATE 17/8/19
 	•	Updated clover
 	•	Updated all kexts to latest version
 	•	Optimise config.plist and acpi hotpatches.
+	•	Move from usbinjectall and UIAC.aml to native usb
+	•	I2C Touchpad working in GPIO mode.
+	•	Working HDMI 1080p and audio.
 	•	Added a guide for bios editing (only for expert members). Please don't use my efi version without these patches. You won't be able to boot.
 
 Note:  I really think that with this version we are as close to MacOs as we can get. I will still keep trying to optimise it.
