@@ -52,7 +52,7 @@ Some notes :
 MAJOR UPDATE 17/8/19
 
 	•	Ready for Catalina 10.15
-	•	Implemented opencore bootloader. You can choose 
+	•	Implemented opencore bootloader.You can choose to use OC or Clover (Clover is default).
 	•	Updated clover
 	•	Updated all kexts to latest version
 	•	Optimise config.plist and acpi hotpatches.
