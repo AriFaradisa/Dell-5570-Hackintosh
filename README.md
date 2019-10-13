@@ -1,3 +1,5 @@
+
+# Dell-5570-hackintosh
 Hackintosh on Dell 5570
 
 
@@ -16,7 +18,7 @@ Card reader : I don't need it , so I disabled it from bios.
 
 What is working : Pretty much everything...
 
-CPU management : native cpu management at High Sierra (see note 1) and Mojave/Catalina with smbios 15,2.
+CPU management : native cpu management at High Sierra with smbios 15,2 and Mojave/Catalina with smbios 15,4 (see note 1).
 Battery managment : getting 4,5-5 hours , with browsing , music and office editing. Better that windows 10 !!!
 Audio : working great including headphones.
 Sleep/wake : lid close / open working as it should. Laptop sleeps overnight with 3-4% battery lost.
@@ -31,9 +33,9 @@ I will not get into details. You can read the great guides at forum for getting 
 
 Some notes :
 
-1) If you want to use smbios 15,2 (which I find better for our laptop) you should use Mojave or High Sierra at least on version G65. If you try to install lower High Sierra version you won't be able to boot. If you prefer you can use smbios 14,1 whick will work on all version of HS , but without proper cpu management.
+1) If you want to use High Sierra you need to use configHS.plist and  High Sierra at least on version G65. If you try to install lower High Sierra version you won't be able to boot. If you prefer you can use smbios 14,1 whick will work on all version of HS , but without proper cpu management.
 
-2) With smbios 15,2 be sure to have in your clover/kexts/other folder the notouchid.kext. Otherwise you will be experiencing a lag when prompting for security password.
+2) Be sure to have in your clover/kexts/other folder the notouchid.kext. Otherwise you will be experiencing a lag when prompting for security password.
 
 3) Dispaly analysis is set to 1920x1080 (default). If you find (like me) that fonts are too small you can use a scaled one (like 1600x900). Or you can run one-key-hidpi-master to get HDIPI , too.
 
@@ -43,22 +45,31 @@ Some notes :
 
 6) Install codecommander.kext at l/e with proper permissions.
 
-7) I have all kexts on clover/other , except codeccommander.kext. You will probably, as Reahabman suggests, want to install them on l/e.
+7) I have all kexts on clover/other , except codeccommander.kext. You will probably, as Rehabman suggests, want to install them on l/e.
 
 8) Get yourself a serial number in config.plist/smbios.
 
 
 
+REFINED UPDATE 13/10/19
+
+	•	Repair sensrhub.aml
+	•	Remove ssdt-xosi and osi to xosi patch as per OC guide
+	•	Implement new ssdt-pmcr.aml. Now ppmc and pmcr both loads in ioreg helping with energy consumption.
+	•	Remove unecessarry patches for trackpad.
+	•	Remove uneceesary patches at config.plist.
+	•	Added device ALSO for remembering display brightness settings as per guide (not sure if we need it though).
+	•	Added smbus device.
+	•	Updated clover and kexts to latest version
+	•	Change smbios to 15,4 which seems better choice. Warning!!! Smbios 15,4 is not compatible with High Sierra. There is a configHS.plist if you prefer smbios 15,2 on HS instead).
+
 MAJOR UPDATE 17/8/19
 
 	•	Ready for Catalina 10.15
-	•	Implemented opencore bootloader.You can choose to use OC or Clover (Clover is default).
+	•	Implemented opencore bootloader. You can choose 
 	•	Updated clover
 	•	Updated all kexts to latest version
 	•	Optimise config.plist and acpi hotpatches.
-	•	Move from usbinjectall and UIAC.aml to native usb
-	•	I2C Touchpad working in GPIO mode.
-	•	Working HDMI 1080p and audio.
 	•	Added a guide for bios editing (only for expert members). Please don't use my efi version without these patches. You won't be able to boot.
 
 Note:  I really think that with this version we are as close to MacOs as we can get. I will still keep trying to optimise it.
