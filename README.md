@@ -51,7 +51,15 @@ Some notes :
 
 
 FOR TEST PURPOSES
-Replace RealtekRTL8100.kext (from Mieze RealtekRTL8100) with this one : RealtekRTL8100.kext.zip
+Replace RealtekRTL8100.kext with this one : https://www.tonymacx86.com/attachments/realtekrtl8100-kext-zip.303340/
+
+After rebooting my cpu idles at 1.2ghz (as always) but thit time minimum pkg power is at 0.6!!!
+That has a positive impact at both battery consuption and heat producing.
+
+If anyone willing to try just let me know :
+
+1) If the above statement happens to you also , and
+2) If ethernet is working , since I only use wifi.
 
 After rebooting my cpu idles at 1.2ghz (as always) but thit time minimum pkg power is at 0.6!!!
 That has a positive impact at both battery consuption and heat producing.
